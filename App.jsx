@@ -1,46 +1,17 @@
-import { useState } from 'react' 
 import './App.css' 
+import Student from './Student' 
+ 
 function App() { 
-const [name, setName] = useState("") 
-const [email, setEmail] = useState("") 
-const [password, setPassword] = useState("") 
-function showData() { 
-if(name === "" || email === "" || password === ""){ 
-      alert("Please Fill All Fields") 
-    } 
-    else{ 
-      alert("Registered Successfully") 
-    } 
-  } 
-
-  return (
-  <div className="container">
-    <h2>Registration Form</h2>
-
-    <input
-      type="text"
-      placeholder="Enter Your Name"
-      onChange={(e) => setName(e.target.value)}
-    />
-
-    <input
-      type="email"
-      placeholder="Enter Your Email"
-      onChange={(e) => setEmail(e.target.value)}
-    />
-
-    <input
-      type="password"
-      placeholder="Enter Your Password"
-      onChange={(e) => setPassword(e.target.value)}
-    />
-
-    <p>Name: {name}</p>
-    <p>Email: {email}</p>
-    <p>Password: {password}</p>
-
-    <button onClick={showData}>Submit</button>
-  </div>
-)
+ 
+  return ( 
+    <> 
+      <h2>Student Information</h2> 
+ 
+      <Student name="Raj" course="B.tech" marks="90" /> 
+      <Student name="Ram" course="M.tech" marks="95" /> 
+      <Student name="Rohan" course="MCA" marks="99" /> 
+    </> 
+  ) 
 } 
+ 
 export default App
